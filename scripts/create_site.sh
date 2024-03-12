@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# parallel --tmuxpane --fg --delay 0.1 -j 4 ./create_site.sh test {} ::: $(seq 1 16)
+# parallel --tmuxpane --fg --delay 0.1 -j 8 ./scripts/create_site.sh mytestsites {} ::: $(seq 1 16)
 
 site_name=$(printf "$1-%03d" $2)
 
