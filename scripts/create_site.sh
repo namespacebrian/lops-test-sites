@@ -3,7 +3,7 @@
 ## Install supporting packages
 # brew install tmux parallel gnu-sed
 
-## Fix parallel to work with tmux
+## Fix parallel to work with tmux - see https://savannah.gnu.org/bugs/?64993
 # sed -i.bak 's/\$len = ::min(\$len,int(\$tmux_len\/4-33));/\$len = ::min(\$len,\$tmux_len-33);/' $(readlink -f $(which parallel))
 
 ## Create 16 sites named `mytestsites-001` to `mytestsites-016`, running 8 parallel jobs
